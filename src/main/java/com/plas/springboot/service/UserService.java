@@ -19,23 +19,23 @@ import java.util.regex.Pattern;
 public class UserService {
     @Autowired
     public UserMapper userMapper;
-    public List<User> queryUserList(){
-        return userMapper.queryUserList();
-    }
-    public User queryUserById(int id){
-        User user= userMapper.queryUserById(id);
-        return user;
-
-    }
-    public String addUser(User user){
-        userMapper.addUser(user);
-        return "新增成功";
-
-    }
-    public String deleteUserById(int id){
-        userMapper.deleteUserById(id);
-        return "删除成功";
-    }
+//    public List<User> queryUserList(){
+//        return userMapper.queryUserList();
+//    }
+//    public User queryUserById(int id){
+//        User user= userMapper.queryUserById(id);
+//        return user;
+//
+//    }
+//    public String addUser(User user){
+//        userMapper.addUser(user);
+//        return "新增成功";
+//
+//    }
+//    public String deleteUserById(int id){
+//        userMapper.deleteUserById(id);
+//        return "删除成功";
+//    }
 
     public boolean checkStr(String inputString){
         String canshu=inputString;

@@ -1,5 +1,6 @@
 package com.plas.springboot.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.plas.springboot.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
@@ -12,12 +13,20 @@ import java.util.List;
  * @Date: 2023/7/20/10:08
  * @Description:
  */
-@Mapper
-@Repository
-public interface UserMapper {
-    List<User> queryUserList(); //查询全部用户
-    User queryUserById(int id); //查询用户(byID
-    void addUser(User user); //添加用户
-    void deleteUserById(int id); //删除用户（byID
+//@Mapper
+//@Repository
+//public interface UserMapper {
+//    List<User> queryUserList(); //查询全部用户
+//    User queryUserById(int id); //查询用户(byID
+//    void addUser(User user); //添加用户
+//    void deleteUserById(int id); //删除用户（byID
+//
+//}
 
+
+//再对应的mapper上面实现基本的接口 BaseMapper
+@Mapper
+public interface UserMapper extends BaseMapper<User> {
+    //所有的CRUD都已经完成
+    //不需要像以前一样配置一大堆文件：pojo-dao（连接mybatis，配置mapper.xml文件）==>service-controller
 }
