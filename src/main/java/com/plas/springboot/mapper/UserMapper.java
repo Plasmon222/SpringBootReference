@@ -15,9 +15,9 @@ import java.util.List;
 @Mapper
 @Repository
 public interface UserMapper {
-    List<User> queryUserList();
-    User queryUserById(int id);
-    void addUser(User user);
-    void deleteUserById(int id);
+    List<User> queryUserList(); //查询全部用户
+    User queryUserById(int id); //查询用户(byID
+    void addUser(User user); //添加用户
+    void deleteUserById(int id); //删除用户（byID
 
 }
