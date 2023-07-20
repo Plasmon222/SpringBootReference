@@ -13,17 +13,6 @@ import java.util.List;
  * @Date: 2023/7/20/10:08
  * @Description:
  */
-//@Mapper
-//@Repository
-//public interface UserMapper {
-//    List<User> queryUserList(); //查询全部用户
-//    User queryUserById(int id); //查询用户(byID
-//    void addUser(User user); //添加用户
-//    void deleteUserById(int id); //删除用户（byID
-//
-//}
-
-
 //再对应的mapper上面实现基本的接口 BaseMapper
 @Mapper
 public interface UserMapper extends BaseMapper<User> {

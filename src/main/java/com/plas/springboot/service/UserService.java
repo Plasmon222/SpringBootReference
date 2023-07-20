@@ -19,34 +19,21 @@ import java.util.regex.Pattern;
 public class UserService {
     @Autowired
     public UserMapper userMapper;
-//    public List<User> queryUserList(){
-//        return userMapper.queryUserList();
-//    }
-//    public User queryUserById(int id){
-//        User user= userMapper.queryUserById(id);
-//        return user;
-//
-//    }
-//    public String addUser(User user){
-//        userMapper.addUser(user);
-//        return "新增成功";
-//
-//    }
-//    public String deleteUserById(int id){
-//        userMapper.deleteUserById(id);
-//        return "删除成功";
-//    }
 
-    public boolean checkStr(String inputString){
-        String canshu=inputString;
-        boolean checkStrReturn=false;
-        String pattern=".+";
-        Pattern p=Pattern.compile(pattern);
-        if(StringUtil.isNotEmpty(pattern)){
-            Matcher m=p.matcher(canshu);
-            boolean matches = m.matches();
-            checkStrReturn=matches;
-        }
-        return checkStrReturn;
+    //查询全部用户
+    public List<User> queryUserList() {
+        System.out.println("--------selectAll method test-------");
+        return userMapper.selectList(null);
     }
+
+    public User queryUserById(String id) {
+        return userMapper.selectById(id);
+    }
+    public int addUser(User user){
+        return userMapper.insert(user);
+    }
+    public int deleteUser(String id){
+        return userMapper.deleteById(id);
+    }
+
 }
