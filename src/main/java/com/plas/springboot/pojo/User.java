@@ -17,11 +17,10 @@ import java.util.Date;
 @AllArgsConstructor
 public class User {
     @TableId(type = IdType.ASSIGN_ID)
-    private Long uuid;
+    private String uuid;
     private String name;
     @TableField(fill = FieldFill.INSERT) //添加时自动填充
     private String sex;
-
     @TableField(fill = FieldFill.INSERT) //添加时自动填充
     private Date createTime;
     @TableField(fill = FieldFill.INSERT_UPDATE) //添加或修改时自动填充

@@ -1,14 +1,5 @@
-mybatis依赖删除
+SpringBoot标准后端模块
 
-<dependency>
-    <groupId>org.mybatis.spring.boot</groupId>
-    <artifactId>mybatis-spring-boot-starter</artifactId>
-    <version>2.1.1</version>
-</dependency>
+springboot3 + mybatis-plus
 
-导入mybatis-plus依赖
-<dependency>
-    <groupId>com.baomidou</groupId>
-    <artifactId>mybatis-plus-boot-starter</artifactId>
-    <version>3.3.1.tmp</version>
-</dependency>
+实现简单的增删改查操作
